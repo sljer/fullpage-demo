@@ -1,0 +1,260 @@
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body, html, ul, div, li, a, h1 {
+    border: 0;
+    font: 400 16px/100% 'microsoft yahei';
+    list-style: none;
+}
+
+.hd {
+    width: 100%;
+    height: 60px;
+    background: rgba(0, 0, 0, 0.8);
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+
+.hd .inner {
+    width: 980px;
+    margin: 0 auto;
+}
+
+.hd .logo {
+    margin-top: 16px;
+    float: left;
+    margin-left: 20px;
+}
+
+.hd nav {
+    float: left;
+}
+
+.hd nav li {
+    float: left;
+}
+
+.hd nav li a {
+    text-decoration: none;
+    line-height: 60px;
+    display: block;
+    padding: 0 20px;
+    color: #fff;
+}
+
+.hd nav li a:hover, .hd nav li.active a {
+    background-color: #FACB03;
+    color: rgba(0, 0, 0, 0.8);
+}
+
+/*page1*/
+.s1 {
+    background: url(../images/s1.jpg) no-repeat center;
+}
+
+.s1 img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-left: -545px;
+    margin-top: -230px;
+    opacity: 0;
+    transition: 0.5s;
+    transition-delay: 0.8s;
+}
+
+.s1.active img {
+    opacity: 1;
+}
+
+/*page2*/
+.s2 {
+    background: url(../images/s2.jpg) center;
+}
+
+.s2 .left li {
+    transform: translateY(1000px);
+}
+
+.s2 .left li:nth-child(1) {
+    transition-delay: 0.7s;
+}
+
+.s2 .left li:nth-child(2) {
+    transition-delay: 0.8s;
+}
+
+.s2 .left li:nth-child(3) {
+    transition-delay: 0.9s;
+}
+
+.s2.active .left li {
+    transform: translateY(0);
+}
+
+/*right z-index2*/
+/*pubilc section*/
+.section {
+    height: 100%;
+    overflow: hidden;
+}
+
+.section .left {
+    position: absolute;
+    left: 10%;
+    top: 50%;
+    margin-top: -180px;
+    z-index: 2;
+}
+
+.section .left li {
+    margin-right: 20px;
+    float: left;
+    transition: 0.5s;
+}
+
+.section .left li p {
+    font-size: 18px;
+    color: #333;
+    margin: 20px 0;
+    line-height: 1.2em;
+}
+
+.section .left li a {
+    width: 98px;
+    height: 36px;
+    background: url(../images/buy.jpg);
+    display: block;
+}
+
+/*right z-index1*/
+.section .right {
+    position: absolute;
+    top: 8%;
+    right: 5%;
+    text-align: right;
+    z-index: 1;
+}
+
+.section .right h1 {
+    font-size: 34px;
+    color: #333;
+    font-weight: 100;
+    line-height: 2em;
+}
+
+.section .right p {
+    margin-top: 10px;
+    margin-bottom: 11px;
+    font-size: 18px;
+    color: #333;
+    line-height: 1.5em;
+}
+
+.section .right a {
+    color: #333;
+    text-decoration: underline;
+}
+
+.section .right a:hover {
+    text-decoration: none;
+}
+
+.section .bg {
+    position: absolute;
+    right: 0px;
+    top: 20%;
+}
+/*page3*/
+.s3 {
+    background: url(../images/s3.jpg) center;
+}
+.s3  .left li{
+    transition-delay: 0.8s;
+}
+.s3 .left li:nth-child(1) {
+    transform: translateX(0);
+}
+.s3 .left li:nth-child(2) {
+    transform: translateX(-280px);
+}
+.s3 .left li:nth-child(3) {
+    transform: translateX(-558px);
+}
+.s3.active .left li {
+    transform: translateX(0);
+}
+/*page4*/
+.s4 {
+    background: url(../images/s4.jpg) center;
+}
+.s4 .left li:nth-child(1){
+    transform: translate(330px,-1000px);
+}
+.s4 .left li:nth-child(2){
+    transform: translate(0,-1000px);
+}
+.s4 .left li:nth-child(3){
+    transform: translate(-330px,-1000px);
+}
+@keyframes move1 {
+    0%{transform:translate(330px,-1000px)}
+    20%{transform:translate(330px,-0px)}
+    40%{transform:translate(330px,-50px)}
+    60%{transform:translate(330px,-0px)}
+    100%{transform:translate(0px,-0px)}
+}
+@keyframes move2 {
+    0%{transform:translate(0px,-1000px)}
+    20%{transform:translate(0px,-0px)}
+    40%{transform:translate(0px,-50px)}
+    60%{transform:translate(0px,-0px)}
+    100%{transform:translate(0px,-0px)}
+}
+@keyframes move3 {
+    0%{transform:translate(-330px,-1000px)}
+    20%{transform:translate(-330px,-0px)}
+    40%{transform:translate(-330px,-50px)}
+    60%{transform:translate(-330px,-0px)}
+    100%{transform:translate(0px,-0px)}
+}
+.s4.active .left li:nth-child(1){
+    animation:move1 2s 0.8s forwards
+}
+.s4.active .left li:nth-child(2){
+    animation:move2 2s 0.8s forwards
+}
+.s4.active .left li:nth-child(3){
+    animation:move3 2s 0.8s forwards
+}
+/*page5*/
+.s5 {
+    background: url(../images/s5.jpg) center;
+    perspective: 500px;
+}
+.s5 .left li{
+    transform: translate3d(-1100px,-1100px,-500px) rotateX(135deg);
+    transition-delay: 0.8s;
+}
+.s5.active .left li{
+    transform: translate3d(0,0,0px) rotateX(0deg);
+    transition: 0.8s;
+}
+.s5.active .left li:nth-child(1){
+    transition: 0.6s;
+    transition-delay: 0.8s;
+}
+.s5.active .left li:nth-child(2){
+    transition: 0.8s;
+    transition-delay: 0.8s;
+}
+.s5.active .left li:nth-child(3){
+    transition: 1s;
+    transition-delay: 0.8s;
+
+}
